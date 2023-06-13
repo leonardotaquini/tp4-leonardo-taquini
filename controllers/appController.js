@@ -1,11 +1,9 @@
-//Controlador
 
 const peticionGET = (req, res) => {
     try {
-        //Posible consulta a la base de datos.
-        res.json("Peticion GET");
+        res.json({msg: 'Peticion GET'});
     } catch (error) {
-        //Muestro el error por consola
+        
         console.log(error);
         res.status(500).json({ error: 'Ocurrio un error en el servidor.'});
     }
@@ -13,7 +11,7 @@ const peticionGET = (req, res) => {
 
 const peticionPOST = (req, res) => {
     try {
-        res.json("Peticion POST");
+        res.json({ msg: 'Peticion POST'});
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: 'Ocurrio un error en el servidor.'});
@@ -22,7 +20,7 @@ const peticionPOST = (req, res) => {
 
 const peticionPUT = (req, res) => {
     try {
-        res.json("Peticion PUT");
+        res.json({ msg: "Peticion PUT" });
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: 'Ocurrio un error en el servidor.'});
@@ -31,7 +29,7 @@ const peticionPUT = (req, res) => {
 
 const peticionDELETE = (req, res) => {
     try {
-        res.json("Peticion DELETE");
+        res.json({ msg: "Peticion DELETE" });
     }
     catch (error) {
         console.log(error);
